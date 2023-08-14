@@ -19,6 +19,7 @@ import { Event } from './event.entity';
       retryAttempts: 10,
       retryDelay: 5000,
     }),
+    TypeOrmModule.forFeature([Event]),
   ],
   controllers: [AppController, EventsController],
   providers: [AppService],
