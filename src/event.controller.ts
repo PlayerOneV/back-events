@@ -10,11 +10,11 @@ import {
 } from '@nestjs/common';
 import { CreateEventDto } from './create-event.dto';
 import { UpdateEventDto } from './update-event.dto';
-import { EventEntity } from './event.entity';
+import { Event } from './event.entity';
 
 @Controller('events')
 export class EventsController {
-  private events: EventEntity[] = [];
+  private events: Event[] = [];
   @Get()
   findAll() {
     return this.events;
