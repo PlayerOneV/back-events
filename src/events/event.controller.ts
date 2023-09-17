@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { CreateEventDto } from './create-event.dto';
 import { UpdateEventDto } from './update-event.dto';
-import { Event } from './event.entity';
+import { Event } from './entities/event.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
