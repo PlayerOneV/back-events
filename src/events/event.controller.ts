@@ -35,7 +35,10 @@ export class EventsController {
 
   @Get(':id')
   async findOne(@Param('id', ParseIntPipe) id: number) {
-    const event: Event | null = await this.eventRepository.findOneBy({ id });
+    const event: Event | null = await this.eventRepository.findOne({
+      where: { id },
+      relations: ['attendees'],
+    });
 
     if (!event) {
       throw new NotFoundException();
